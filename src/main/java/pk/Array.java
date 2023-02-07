@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-class dynamic{
+class Dynamic{
     private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
     int arr[];
     int size = 0;
@@ -76,7 +76,7 @@ class dynamic{
 public class Array {
     private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
     public static void main(String[] args){
-        dynamic array = new dynamic();
+        Dynamic array = new Dynamic();
         Scanner sc = new Scanner(System.in);
         int n = 0;
         do{

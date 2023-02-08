@@ -66,7 +66,7 @@ class Dynamic{
     }
     void print(){
         for(int i=0; i<size; i++){
-            System.out.print(arr[i]);
+            LOGGER.info(arr[i]);
         }
     }
 

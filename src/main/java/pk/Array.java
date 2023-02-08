@@ -109,7 +109,7 @@ public class Array {
                 }
             }
             else if(m ==3){
-
+                n=1;
             }
         }while(n == 0);
         

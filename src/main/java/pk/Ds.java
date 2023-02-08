@@ -115,7 +115,8 @@ class List{
                     s.append(""+current.data+" ");
                     current = current.next;
                 }
-                LOGGER.info(s.toString());
+                String S = ""+s;
+                LOGGER.info(S);
             }
         }
         

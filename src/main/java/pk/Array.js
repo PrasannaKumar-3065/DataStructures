@@ -104,7 +104,7 @@ console.log(arr3.slice(0,3))
 console.log(arr3.some(value => value%2 == 0))
 
 //sort => sorts the array
-console.log(arr3.sort())
+//console.log(arr3.sort())
 
 //splice => adds elements in the index
 arr3.splice(0,2,"new1","new2")

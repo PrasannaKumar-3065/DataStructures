@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 
 class Array{
     private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
-    int arr[];
+    int[] arr;
     int size = 0;
     int count = 0;
 

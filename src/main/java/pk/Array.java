@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-class Dynamic{
+class Array{
     private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
     int arr[];
     int size = 0;
     int count = 0;
 
-    void increase(){
+    public void increase(){
         if(size == 0){
             arr = new int[1];
         }
@@ -23,15 +23,15 @@ class Dynamic{
         }
         size++;
     }
-    void add(int element){
+    public void add(int element){
         increase();
         arr[size-1] = element;
     }
 
-    void sort(){
+    public void sort(){
         Arrays.sort(arr);
     }
-    void add(int index, int element){
+    public void add(int index, int element){
         if(index>size){
             String s = size+" is the size of the array";
             LOGGER.info(s);
@@ -45,7 +45,7 @@ class Dynamic{
         }
         
     }
-    void remove(){
+    public void remove(){
         int[] temp = new int[size-1];
         for(int i=0; i<size-1; i++){
             temp[i] = arr[i];
@@ -54,7 +54,7 @@ class Dynamic{
         size--;
     }
 
-    void remove(int element){
+    public void remove(int element){
         for(int i=0; i<size; i++){
             if(arr[i] == element){
                 for(int j=i; j<size-1; j++){
@@ -64,23 +64,17 @@ class Dynamic{
         }
         remove();
     }
-    void print(){
+    public void print(){
         for(int i=0; i<size; i++){
-            LOGGER.info(arr[i]);
+            String s = ""+arr[i];
+            LOGGER.info(s);
         }
     }
-
-}
-
-
-public class Array {
-    private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
-    public static void main(String[] args){
-        Dynamic array = new Dynamic();
+    public void accessArray(){
         Scanner sc = new Scanner(System.in);
         int n = 0;
         do{
-            LOGGER.info("1.Add 2.Remove. 3.exit");
+            LOGGER.info("1.Add 2.Remove 3.print 4.exit");
             int m = sc.nextInt();
             if(m == 1){
                 LOGGER.info("Enter element to insert: ");
@@ -88,30 +82,35 @@ public class Array {
                 LOGGER.info("1.Add at last 2.add at index");
                 int ch = sc.nextInt();
                 if(ch == 1){
-                    array.add(element);
+                    add(element);
                 }
                 else if(ch == 2){
                     LOGGER.info("Enter index to insert: ");
                     int index = sc.nextInt();
-                    array.add(index, element);
+                    add(index, element);
                 }
             }
             else if(m == 2){
                 LOGGER.info("1.Remove at last 2.search element and remove");
                 int ch = sc.nextInt();
                 if(ch == 1){
-                    array.remove();
+                    remove();
                 }
                 else if(ch == 2){
                     LOGGER.info("Enter element to remove: ");
                     int index = sc.nextInt();
-                    array.remove(index);
+                    remove(index);
                 }
             }
             else if(m ==3){
+                print();
+            }
+            else if(m ==4){
                 n=1;
             }
         }while(n == 0);
         
     }
-}
+
+}    
+
